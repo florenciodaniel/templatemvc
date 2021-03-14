@@ -1,0 +1,21 @@
+.sobre{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background: linear-gradient(0deg, rgba(37, 196, 245,0.4) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 50%, rgba(240, 123, 34,0.4) 100%);
+    background-color: rgba(0,0,0,0.2);
+    .container{
+        h2{
+            text-align: center;
+            margin: 30px;
+            font-size: 3.5rem;
+        }
+        p{
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 15px;
+            /*        font-weight: bold;*/
+        }
+    }
+}

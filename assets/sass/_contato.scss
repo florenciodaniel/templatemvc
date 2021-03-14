@@ -1,0 +1,133 @@
+.contato{
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: linear-gradient(0deg, rgba(122, 122, 122,0.4) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 50%, rgba(240,123,34,0.4) 100%);
+    background-color: rgba(0,0,0,0.2);
+    .container{
+padding-top: 60px;
+   padding-bottom: 60px;
+          h2{
+            text-align: center;
+            color: white;
+
+            span{
+                background-color: rgba(240, 123, 34,1);
+                padding: 8px;
+                border: 3px solid white;
+                border-radius: 15px;
+                font-size: 3rem;
+            }
+    }
+        p{
+            width: 100%;
+            text-align: center;
+            color: rgba(0, 0, 0,0.9);
+            font-size: 2.5rem;
+            padding: 10px;
+            font-weight: bold;
+            padding-top: 30px;
+        }
+    }
+}
+.contato-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.contato-box{
+    width: 90%;
+    margin-left: 5%;
+    border: 1px solid black;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    .box-icon{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        img{
+            height: 30px;
+        }
+        span{
+            font-size: 1.9rem;
+            padding-left: 8px;
+        }
+    }
+
+    .form{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .a1{
+            width: 100%;
+        }
+        .a2{
+            width: 100%; 
+        }
+        .a3{
+            width: 100%;
+        }
+        .a4{
+            width: 100%;
+        }
+
+    }
+
+    .input{
+        padding: 10px;
+        position: relative;
+
+        label{
+            width: 100%;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        input{
+            width: 100%;
+            font-size: 1.8rem;
+            border: 1px solid rgba(63, 64, 59,1);
+            border-radius: 3px;
+            box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+            padding: 2px;
+        }
+
+        textarea{
+            width: 100%;
+            min-height: 100px;
+            font-size: 2rem;
+            border: 1px solid rgba(63, 64, 59,1);
+            border-radius: 3px; 
+            box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+            padding: 2px;
+        }
+    }
+}
+
+/*768 px*/
+@media only screen and (min-width: 48em) {
+    .contato-container{
+        flex-direction: row;
+    }
+    .contato-box{
+        width: 42%;
+    }
+}
+
+/*1024 px*/
+@media only screen and (min-width: 64em) {
+
+
+
+}
+
+
+/*1200 px*/
+@media only screen and (min-width: 75em) {
+
+
+}
