@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>Kalusa Moveis</title>
+        <title>Loja MIX</title>
         <link rel="icon" href="favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="uma breve descrição do site, ex. desenvovimento web, sistemas, serviços de manutenção, ate 150 cracteres">
@@ -18,10 +18,11 @@
     </head>
 
     <body>
-        <header id="header-topo">
+        <header id="header-topo" class="header-topo">
             <nav class="nav-topo">
                 <ul class="ul-logo">
-                    <li><a href="<?php echo BASE_URL ?>" onclick="menu()">Kalusa Moveis</a></li>
+                    <li><a href="<?php echo BASE_URL ?>" onclick="menu()">LOJA MIX</a></li>
+<!--                    <li> <a href="<?php echo BASE_URL; ?>" onclick="menu()"><img src="<?php echo BASE_URL; ?>assets/img/menu/logo_dimelux.png" alt=""/></a></li>-->
 
                 </ul>
 
@@ -31,10 +32,11 @@
                 </div>
                 <ul id="ul-link" class="ul-link inativo">
                     <li><a href="<?php echo BASE_URL ?>home" onclick="menu()">Home</a></li>
-                    <li><a href="<?php echo BASE_URL ?>#destaque" onclick="menu()">Destaques</a></li>
-                    <li><a href="<?php echo BASE_URL ?>produtos" onclick="menu()">Produtos</a></li>
-                    <li><a href="#contato" onclick="menu()">Contato</a></li>
-                    <li><a href="<?php echo BASE_URL ?>home/destaques" onclick="menu()">Equipe</a></li>
+                    <li><a href="<?php echo BASE_URL ?>#section1" onclick="menu()">Section 1</a></li>
+                    <li><a href="<?php echo BASE_URL ?>#section2" onclick="menu()">Section 2</a></li>
+                    <li><a href="<?php echo BASE_URL ?>produtos" onclick="menu()">Page 1</a></li>
+                    <!--                    <li><a href="#contato" onclick="menu()">Contato</a></li>-->
+                    <li><a href="<?php echo BASE_URL ?>home/destaques" onclick="menu()">Page 2</a></li>
                 </ul>
             </nav>
 
@@ -73,15 +75,37 @@
         <script src="<?php echo BASE_URL ?>assets/js/bootanime.js" type="text/javascript"></script>
 
 
-        <script type="text/javascript">
-                        //codigo que faz sumir o menu em telas pequenas ao clicar em um link e tambem troca o backgroud do menu fechado aberto
-                        function menu() {
-                            document.getElementById('esconder').classList.remove('active');
-                            document.getElementById('esconder').classList.add('menu');
-                            document.getElementById('menu_img').classList.remove('menu-aberto');
-                            document.getElementById('menu_img').classList.add('menu-fechado');
+        <script>
+                        //codigo que calcula o tamanho da tela
+                        function sizeOfThings() {
+                            var windowWidth = window.innerWidth;
+                            var windowHeight = window.innerHeight;
+
+                            var screenWidth = screen.width;
+                            var screenHeight = screen.height;
+                           //ajustando o tamnho do header conforme o tamanho da janela
+                            document.getElementById('header-topo').style.width = windowWidth + 'px';
 
                         }
+                        ;
+
+                        sizeOfThings();
+
+                        window.addEventListener('resize', function () {
+                            sizeOfThings();
+                        });
+        </script>
+
+
+        <script type="text/javascript">
+            //codigo que faz sumir o menu em telas pequenas ao clicar em um link e tambem troca o backgroud do menu fechado aberto
+            function menu() {
+                document.getElementById('esconder').classList.remove('active');
+                document.getElementById('esconder').classList.add('menu');
+                document.getElementById('menu_img').classList.remove('menu-aberto');
+                document.getElementById('menu_img').classList.add('menu-fechado');
+
+            }
 
         </script>
 
@@ -168,7 +192,7 @@
                 }
             });
             //codigo que traz de outra pagina(pagina destaque) para a home ja na section destaque mas perde o smooth
-            //         if (window.location.<?php //echo BASE_URL  ?>"destaque".includes("#destaque"))
+            //         if (window.location.<?php //echo BASE_URL      ?>"destaque".includes("#destaque"))
             //         {
             //            $(document).scrollTop(800);
             //         }

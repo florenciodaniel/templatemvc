@@ -29,7 +29,7 @@
                             <svg enable-background="new 0 0 512 512" width="50" height="50" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M256.064,0h-0.128l0,0C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104  l98.4-31.456C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z" fill="#4CAF50"/><path d="m405.02 361.5c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.62-127.46-112.58-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016 0.16 8.576 0.288 7.52 0.32 11.296 0.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744s-7.36 7.68-11.136 12.352c-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z" fill="#FAFAFA"/></svg>
                         </a>
                         <div class="sobre">
-                            <div class="container  bcontainer"  data-boot_aparecer="dir">
+                            <div class="container  bcontainer"  data-bootanime="dir">
                                 <h2><span>KALUSA MOVEIS</span></h2>
                                 <p>Fusce lobortis rutrum turpis consectetur mattis. Ut dui est, elementum eget vehicula ac, bibendum non tellus. Aliquam aliquam scelerisque odio sed scelerisque. Nullam ligula turpis, lacinia ut massa id, suscipit lacinia eros. Cras pharetra iaculis dolor quis sollicitudin. Nam condimentum efficitur arcu, eget pretium turpis lobortis vel. Proin blandit bibendum molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque facilisis sollicitudin elit, at feugiat enim rhoncus et. Nulla sit amet volutpat dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin sit amet lacus aliquam quam lacinia iaculis.</p>
                                 <p>Maecenas id varius velit, ut ultrices nulla. Nullam non odio suscipit, faucibus velit mollis, faucibus risus. Sed vulputate rhoncus ultricies. Sed mollis, erat nec molestie luctus, erat felis bibendum purus, ut maximus orci lorem vitae turpis. Integer pellentesque eu velit non faucibus. Cras eget molestie urna, ut pulvinar tortor. Vestibulum suscipit quam nec velit luctus hendrerit. Proin sit amet ante ac turpis vestibulum rutrum at a ante. </p>
@@ -37,12 +37,13 @@
                             </div>
                         </div>
                         <div class="destaque" id="destaque">
-                            <h2 data-boot_aparecer="aparecer"><span>Produtos em destaque</span></h2>
+                            <h2 data-bootanime="aparecer"><span>Produtos em destaque</span></h2>
                             <div class="bcontainer container" >
+                                <?php if(isset($produtos)):?>
                                 <?php foreach ($produtos as $pro): ?>
 
                                     <a href="#<?php echo $pro['id'] ?>">
-                                        <div class="item" data-boot_flip="baixo">
+                                        <div class="item" data-bootanime="baixo">
 
                                             <img src="<?php echo BASE_URL ?>assets/media/produtos/<?php echo $pro['img'][0]['url'] ?>" alt=""/>
                                             <p class="nome"><span><?php echo $pro['nome'] ?></span></p>
@@ -105,7 +106,7 @@
 
                                     </div>
                                 <?php endforeach; ?>
-
+<?php endif;?>
 
                             </div>
 
@@ -127,10 +128,10 @@
 
 
                         </script>
-                        <div class="feedback">
-                            <h2 data-boot_aparecer="aparecer"><span>Nossa propaganda são clientes satisfeitos</span></h2>
+<div class="feedback" id="section1">
+                            <h2 data-bootanime="aparecer"><span>Nossa propaganda são clientes satisfeitos</span></h2>
                             <div class="bcontainer container">
-                                <div class="depoimento" data-boot_flip="esquerda">
+                                <div class="depoimento" data-bootanime="esquerda">
                                     <div class="depoimento-img">
                                         <img src="<?php echo BASE_URL ?>assets/img/depoimentos/36176785_1672011942912182_145415592503934976_n.jpg" alt=""/>
                                     </div>
@@ -139,7 +140,7 @@
                                         Esta musica é um dialogo entre os "eus" para o seu verdadeiro Ser, quando ele diz muro é a respeito das barreiras que estes "eus" criam na existencia, pois só conhecerao a verdade quando tiver liberdade total, mas nao esta simples material, mas sim liberdade de seu verdadeiro Ser. 
                                     </p>
                                 </div>
-                                <div class="depoimento" data-boot_flip="baixo">
+                                <div class="depoimento" data-bootanime="baixo">
                                     <div class="depoimento-img">
                                         <img src="<?php echo BASE_URL ?>assets/img/depoimentos/d85b5eaf4ac092dddbfbf4fa13327f45.jpg" alt=""/>
                                     </div>
@@ -148,7 +149,7 @@
                                         Esta musica é um dialogo entre os "eus" para o seu verdadeiro Ser, quando ele diz muro é a respeito das barreiras que estes "eus" criam na existencia, pois só conhecerao a verdade quando tiver liberdade total, mas nao esta simples material, mas sim liberdade de seu verdadeiro Ser. 
                                     </p>
                                 </div>
-                                <div class="depoimento" data-boot_flip="direita">
+                                <div class="depoimento" data-bootanime="direita">
                                     <div class="depoimento-img">
                                         <img src="<?php echo BASE_URL ?>assets/img/depoimentos/adult-1867889_1280.jpg" alt=""/> 
                                     </div>
@@ -165,7 +166,7 @@
 
                         <div id="contato" class="contato">
                             <div class="container bcontainer">
-                                <h2 data-boot_aparecer="aparecer"><span>Estamos a sua disposição</span></h2>
+                                <h2 data-bootanime="aparecer"><span>Estamos a sua disposição</span></h2>
                                 <p>Para um melhor atendimento disponibilamos varios meios para receber o seu contato</p>
                                 <div class="contato-container" data-boot_aparecer="aparecer">
                                     <div class="contato-box">
@@ -228,10 +229,10 @@
                             </div>
                         </div>
 
-                        <div class="maps">
+<div class="maps" id="section2">
                             <h2><span>Visite a Kalusa Moveis</span></h2>
                             <p><span>Rua Joaquim Romeu Belterin N° 1538 - Bairro São Francisco - CEP 99052-014 - Passo Fundo RS</span></p>
-                            <div class="bcontainer container" data-boot_aparecer="aparecer">
+                            <div class="bcontainer container" data-bootanime="aparecer">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7037.11208195933!2d-52.41079727550997!3d-28.266246423662963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1581712201500!5m2!1spt-BR!2sbr" width="100%" height="600" frameborder="0"  allowfullscreen="" class="bmartop_13"></iframe>
                             </div>
 
